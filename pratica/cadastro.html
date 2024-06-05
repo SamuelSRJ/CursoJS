@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portal de Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <label for="formname">Nome:</label><br>
+    <input type="text" id="txtname" size="30" class="inputs"><br>
+    <label for="formemail">E-mail:</label><br>
+    <input type="email" id="txtemail" size="30" class="inputs"><br>
+    <label for="formsenha">Senha:</label>
+    <input type="password" id="txtsenha" size="20" class="inputs"><br>
+    <label for="formconfirmsenha">Confirmar senha:</label>
+    <input type="password" id="txtconfirsenha" size="20" class="inputs"><br>
+    <input type="button" value="Cadastrar" class="botao"><br>
+    <a href="index.html" class="botao_orientacao">Voltar</a>
+    <script>
+        var nomecadastrado = window.document.querySelector('input#txtnome')
+        var emailcadastrado = window.document.querySelector('input#txtemail')
+        var senhacadastrada = window.document.querySelector('input#senha')
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Teste de Condicionais</title>
+</head>
+<body>
+    <h1>Painel de Controle</h1>
+    <label for="formname">E-mail:</label><br>
+    <input type="email" name="txtemail" id="txtemail" size="50" class="inputs"><br>
+    <label for="formsenha">Senha:</label><br>
+    <input type="password" name="txtsenha" id="txtsenha" class="inputs" size="50"><br>
+    <input type="button" value="Entrar" class="botao" id="btnEntrar">
+    <br>
+    <p id="mensagem">Não tem cadastro? <a href="cadastro.html" class="botao_orientacao">Cadastrar-se</a></p>
+
+    <script>
+        var buttonentrar = window.document.getElementById('btnEntrar')
+        buttonentrar.addEventListener('click', entrar)
+        var nome
+        var email
+        var pswd
+        
+        function entrar(){
+            
+        }
+    </script>
+</body>
+</html>

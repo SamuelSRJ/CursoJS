@@ -1,0 +1,32 @@
+body{
+    font: normal 16pt Arial;
+}
+label{
+    font: normal 16pt Arial;
+    color: black;
+    margin-top: 15px;
+}
+.inputs{
+    font: normal 12pt Arial;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    ;
+}
+.botao{
+    font: normal 16pt Arial;
+    background: rgb(192, 253, 190);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.botao:hover{
+    box-shadow: 2px 2px gray;
+}
+.botao_orientacao{
+    font: normal 14pt Arial;
+    /*border: 1px;
+    border-radius: 15px;
+    padding: 7px;*/
+}
+#mensagem{
+    font-size: 14pt;
+}
