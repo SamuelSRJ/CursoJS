@@ -30,3 +30,9 @@ label{
 #mensagem{
     font-size: 14pt;
 }
+.corpo{
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
