@@ -20,12 +20,19 @@
     <script>
         var buttonentrar = window.document.getElementById('btnEntrar')
         buttonentrar.addEventListener('click', entrar)
-        var nome
-        var email
-        var pswd
         
         function entrar(){
-            
+            var email = window.document.querySelector('input#txtemail')
+            var senha = window.document.querySelector('input#txtsenha')
+
+            var v_email = email.value
+            var v_senha = email.value
+
+            if(email == "admin" && senha == "admin"){
+                window.alert(`Acesso liberado! EMAIL: ${email} SENHA: ${senha}`)
+            }else{
+                window.alert(`Usuário ou senha incorretos! EMAIL: ${email} SENHA: ${senha}`)
+            }
         }
     </script>
 </body>
