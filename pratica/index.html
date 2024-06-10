@@ -9,29 +9,40 @@
 <body>
     <div class="corpo">
         <h1>Painel de Controle</h1>
-        <label for="formname">E-mail:</label><br>
-        <input type="email" name="txtemail" id="txtemail" size="50" class="inputs"><br>
-        <label for="formsenha">Senha:</label><br>
-        <input type="password" name="txtsenha" id="txtsenha" class="inputs" size="50"><br>
-        <input type="button" value="Entrar" class="botao" id="btnEntrar">
+        <form id="frm_Login">
+            <!--<label for="formname">E-mail:</label><br>-->
+            E-mail: <input type="email" name="txtemail" id="txtemail" size="50" class="inputs"><br>
+            <!--<label for="formsenha">Senha:</label><br>-->
+            Senha: <input type="password" name="txtsenha" id="txtsenha" class="inputs" size="50"><br>
+            <input type="button" value="Entrar" class="botao" id="btnEntrar">
+        </form>
         <br>
         <p id="mensagem">Não tem cadastro? <a href="cadastro.html" class="botao_orientacao">Cadastrar-se</a></p>
     </div>
     <script>
         var buttonentrar = window.document.getElementById('btnEntrar')
         buttonentrar.addEventListener('click', entrar)
+
+        document.getElementById('frm_Login').addEventListener('keydown', function(event){
+            if(event.key === 'Enter'){
+                entrar()
+            }
+        })
         
         function entrar(){
-            var email = window.document.querySelector('input#txtemail')
-            var senha = window.document.querySelector('input#txtsenha')
+            var email = window.document.querySelector('input#txtemail').value
+            var senha = window.document.querySelector('input#txtsenha').value
 
-            var v_email = email.value
-            var v_senha = email.value
-
-            if(email == "admin" && senha == "admin"){
-                window.alert(`Acesso liberado! EMAIL: ${email} SENHA: ${senha}`)
+            if(email === "admin" && senha === "admin"){
+                window.alert(`Acesso liberado!`)
+                window.document.querySelector('input#txtemail').value = ''
+                window.document.querySelector('input#txtsenha').value = ''
+                window.document.querySelector('input#txtemail').focus()
             }else{
-                window.alert(`Usuário ou senha incorretos! EMAIL: ${email} SENHA: ${senha}`)
+                window.alert(`Usuário ou senha incorretos!`)
+                window.document.querySelector('input#txtemail').value = ''
+                window.document.querySelector('input#txtsenha').value = ''
+                window.document.querySelector('input#txtemail').focus()
             }
         }
     </script>
