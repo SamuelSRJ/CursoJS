@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>POLICIA FEDERAL</h1>
+    Informe o seu país de origem: <input type="text" name="txtpais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var txtp = window.document.querySelector(`input#pais`)
+            var res = window.document.querySelector(`div#res`)
+            var pais = (txtp.value)
+
+            res.innerHTML = `Vivendo em ${pais} você é: `
+            if(pais == `Brasil`){
+                res.innerHTML += `<strong>Brasileiro</strong>`
+            }else{
+                res.innerHTML += `<strong>Estrangeiro</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
