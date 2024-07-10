@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercicio</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>Titulo</h1>
+        <h1 id="valor">Tabuada</h1>
     </header>
     <section>
         <div>
-            Testando...
+            <p>
+                Numero:<input type="number" name="txtnum" id="txtnum">
+                <input type="button" value="Gerar Tabuada" onclick="calcular()">
+            </p>
         </div>
         <div>
-            Olá
+            <select name="slctab" id="slctab" size="11">
+                <option>Digite um numero acima...</option>
+            </select>
         </div>
     </section>
     <footer>
